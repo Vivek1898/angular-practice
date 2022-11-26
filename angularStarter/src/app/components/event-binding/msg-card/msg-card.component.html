@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                <p class="h4"> Events Binding</p>
+                </div>
+                <div class="card-body">
+ 
+ <p class="h2">{{msg}}</p>
+ <p class="h3">With 3 functions</p>
+ <br>
+ <br>
+<button (click)="sayGoodMorning()" class="btn btn-success btn-sm">Good Morning</button>
+
+ <button (click)="sayGoodA()" class="btn btn-warning btn-sm">Good AfterNoon</button>
+ <button (click)="sayGoodE()" class="btn btn-danger btn-sm">Good Evening</button>
+             <br>
+             <br>
+             <br>
+             <p class="h3">With 1 functions</p>   
+
+            <button (click)="displayMsg('Good Morning')" class="btn btn-success btn-sm">Good Morning</button>
+
+ <button (click)="displayMsg('Good Afternoon')" class="btn btn-warning btn-sm">Good AfterNoon</button>
+ <button (click)="displayMsg('Good Evening')" class="btn btn-danger btn-sm">Good Evening</button>
+</div> 
+            </div>
+        </div>
+    </div>
+</div>
