@@ -1,14 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { EmployeesService } from 'src/app/services/employees.service';
-import { IEmployee } from 'src/app/models/IEmployee';
-@Component({
-  selector: 'app-employees',
-  templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.css']
-})
-export class EmployeesComponent implements OnInit {
+import { Injectable } from '@angular/core';
 
-  public employee:IEmployee[]=[];
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
   public employees=[{"id":1,"first_name":"Ogdon","last_name":"Wynrehame","email":"owynrehame0@sciencedirect.com","gender":"Male","ip_address":"112.157.121.49"},
   {"id":2,"first_name":"Anett","last_name":"Aveling","email":"aaveling1@npr.org","gender":"Female","ip_address":"68.214.92.45"},
   {"id":3,"first_name":"Basia","last_name":"Grzesiewicz","email":"bgrzesiewicz2@skype.com","gender":"Female","ip_address":"86.121.235.140"},
@@ -34,19 +29,5 @@ export class EmployeesComponent implements OnInit {
   {"id":23,"first_name":"Etta","last_name":"Antonio","email":"eantoniom@google.pl","gender":"Female","ip_address":"188.25.110.67"},
   {"id":24,"first_name":"Sol","last_name":"Potticary","email":"spotticaryn@friendfeed.com","gender":"Male","ip_address":"55.129.67.229"},
   {"id":25,"first_name":"Ingeborg","last_name":"Matkin","email":"imatkino@deliciousdays.com","gender":"Female","ip_address":"89.17.110.116"}];
-  public errorMessage!: string;
-  constructor(private employeesService:EmployeesService) { }
-
-  ngOnInit(): void {
-    this.employeesService.getAllEmployees().subscribe((data) =>{
-      this.employee = data;
-    },(error) =>{
-      this.errorMessage = error;
-      console.log(error);
-    }
-
-    )
-
-  }
-
+  constructor() { }
 }

@@ -9,6 +9,7 @@ export class CardComponent implements OnInit {
 
   public msg:string='GOOD MORNING VIVEK';
   public time :string = new Date().toLocaleTimeString();
+  public money:number = 1000;
   constructor() { }
 
   ngOnInit(): void {
