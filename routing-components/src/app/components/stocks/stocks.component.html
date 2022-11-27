@@ -1,0 +1,39 @@
+
+<div class="container mt-3">
+    <div class="row-">
+        <div class="col">
+            <p class="h3 text-danger">Stocks Information</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sequi, ab eos distinctio officiis voluptates labore suscipit praesentium non velit, hic incidunt vitae eum rerum. Iusto odio placeat quo quos!</p>
+    
+    
+            <!-- <pre>{{employee | json}}</pre> -->
+    
+            <table class="table table-danger text-center table-striped">
+                <thead>
+                    <tr>
+                        <th>Stock ID</th>
+                        <th>Name</th>
+                        <th>Market</th>
+                        <th>Symbol</th>
+                        <th>Sector</th>
+                        <th>Cap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of Stocks">
+                        <td>{{s.id}}</td>
+                        <td>{{s.stock_name}}</td>
+                        <td>{{s.stock_market}}</td>
+                        <td>{{s.stock_symbol}}</td>
+                        <td>{{s.stock_sector}}</td>
+                        <td>{{s.stock_cap}}</td>
+                        
+                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    </div>
+    
